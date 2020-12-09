@@ -119,7 +119,7 @@ let call_compiler ?profile:(profile=false) ml_filename =
     else
       []
   in
-  let flambda_args = if Sys.(backend_type = Native) then ["-Oclassic"] else [] in
+  let flambda_args = if Sys.(backend_type = Native) then ["-Oclassic"; "-linscan"] else [] in
   let args =
     initial_args @
       profile_args @
